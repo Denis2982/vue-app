@@ -1,0 +1,51 @@
+@import 'vars';
+@import 'mixins';
+@import 'reset';
+@import 'base';
+
+#app {
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: $ff;
+    font-size: 16px;
+    margin: 0; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}
+
+.container {
+    max-width: 1480px;
+    padding: 0 20px;
+}
+
+.wrapper {
+    max-width: 1440px;
+    height: 960px;
+    background: $bg;
+    border-radius: 44px;
+    box-shadow: 0 1px 10px #cacaca;
+    display: grid;
+    grid-template-columns: 600px auto;
+    padding: 32px 32px 32px 40px;    
+    @include desctop-small{
+        grid-template-columns: 450px auto;           
+     }  
+     @include tablet{  
+        display: block;       
+        padding: 30px;
+        border-radius: 20px; 
+        height: 100%;              
+     }  
+}
+
+.login__inner {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+//----------------------------------------------------------------------//
+
